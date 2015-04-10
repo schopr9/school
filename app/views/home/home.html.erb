@@ -1,0 +1,35 @@
+
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="jumbotron" >
+        <h1>Admissions 2015</h1>
+        <p>Please visit the page for more details</p>
+        <p><a class="btn btn-primary btn-lg" href="/home/admission" role="button">Enter</a></p>
+      </div>
+    </div>
+    <div class="col-sm-offset-8">
+      <div class="panel panel-default" class="col-md-pull-2">
+        <div class="panel-heading" >Notice Board</div>
+        <div class="panel-body">
+          <% @notice.each do |notice| %>
+              <a href="/notices/<%= notice.id %>"> <%= notice.titlt %></a></br>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-offset-8">
+      <div class="panel panel-default" class="col-sm-2">
+        <div class="panel-heading">
+          <h3 class="panel-title">Upcoming Events</h3>
+        </div>
+        <div class="panel-body">
+          <% @events.each do |event| %>
+              <a href="/events/<%= event.id %>"> <%= event.title %></a></br>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+<div class="hero-unit">
+<p>
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+
+<p>
+  <strong></strong>
+  <%= @event.body %>
+</p>
+</div>
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
