@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+<div class="col-sm-2">
+<%= image_tag @teacher.image_url(:thumb) %>
+<p>
+  <strong>Teacher:</strong>
+  <%= @teacher.teacher_id %>
+</p>
+</div>
+<div offset = "col-sm-offset-2">
+<p>
+  <strong>About me:</strong>
+  <%= simple_format(@teacher.about_me) %>
+</p>
+</div>
+</div>
+
+<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
+<%= link_to 'Back', teachers_path %>

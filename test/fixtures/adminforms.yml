@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name_of_student: MyString
+  Gender: false
+  Class: 1
+  Date_of_birth: 2015-04-11 16:47:44
+  Category: MyString
+  Nationality: MyString
+  Father_name: MyString
+  Mother_name: MyString
+  Address_line_1-_string: MyString
+  Address_line2: MyString
+  City: MyString
+  State: MyString
+  Pin_code: 1
+  Email: MyString
+  Phone: 1
+  Father_occupation_-string: MyString
+  Highest_degree_1: MyString
+  Annual_income_1: 1
+  Mother_occupation: MyString
+  Highest_degree_2: MyString
+  Annual_income_2: 1
+
+two:
+  Name_of_student: MyString
+  Gender: false
+  Class: 1
+  Date_of_birth: 2015-04-11 16:47:44
+  Category: MyString
+  Nationality: MyString
+  Father_name: MyString
+  Mother_name: MyString
+  Address_line_1-_string: MyString
+  Address_line2: MyString
+  City: MyString
+  State: MyString
+  Pin_code: 1
+  Email: MyString
+  Phone: 1
+  Father_occupation_-string: MyString
+  Highest_degree_1: MyString
+  Annual_income_1: 1
+  Mother_occupation: MyString
+  Highest_degree_2: MyString
+  Annual_income_2: 1

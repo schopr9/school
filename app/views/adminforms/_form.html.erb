@@ -1,0 +1,103 @@
+<%= form_for(@adminform) do |f| %>
+  <% if @adminform.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@adminform.errors.count, "error") %> prohibited this adminform from being saved:</h2>
+
+      <ul>
+      <% @adminform.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name_of_student %><br>
+    <%= f.text_field :Name_of_student %>
+  </div>
+  <div class="field">
+         <%= f.radio_button :Gender, true %> <%= f.label :Gender, "Female" %>
+          <%= f.radio_button :Gender, false %> <%= f.label :Gender, "Male" %>
+  </div>
+  <div class="field">
+    <%= f.label :Class %><br>
+    <%= f.number_field :Class %>
+  </div>
+  <div class="field">
+    <%= f.label :Date_of_birth %><br>
+    <%= f.datetime_select :Date_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :Category %><br>
+    <%= f.radio_button :Category, "GEN" %><%= f.label :Category, "GEN" %>
+    <%= f.radio_button :Category, "SC" %><%= f.label :Category, "SC" %>
+    <%= f.radio_button :Category, "ST" %><%= f.label :Category, "ST" %>
+  </div>
+  <div class="field">
+    <%= f.label :Nationality %><br>
+    <%= f.text_field :Nationality %>
+  </div>
+  <div class="field">
+    <%= f.label :Father_name %><br>
+    <%= f.text_field :Father_name %>
+  </div>
+  <div class="field">
+    <%= f.label :Mother_name %><br>
+    <%= f.text_field :Mother_name %>
+  </div>
+  <div class="field">
+    <%= f.label :Address_line_1 %><br>
+    <%= f.text_field :Address_line_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :Address_line2 %><br>
+    <%= f.text_field :Address_line2 %>
+  </div>
+  <div class="field">
+    <%= f.label :City %><br>
+    <%= f.text_field :City %>
+  </div>
+  <div class="field">
+    <%= f.label :State %><br>
+    <%= f.text_field :State %>
+  </div>
+  <div class="field">
+    <%= f.label :Pin_code %><br>
+    <%= f.number_field :Pin_code %>
+  </div>
+  <div class="field">
+    <%= f.label :Email %><br>
+    <%= f.email_field :Email %>
+  </div>
+  <div class="field">
+    <%= f.label :Phone %><br>
+    <%= f.phone_field :Phone %>
+  </div>
+  <div class="field">
+    <%= f.label :Father_occupation %><br>
+    <%= f.text_field :Father_occupation %>
+  </div>
+  <div class="field">
+    <%= f.label :Highest_degree_1 %><br>
+    <%= f.text_field :Highest_degree_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :Annual_income_1 %><br>
+    <%= f.number_field :Annual_income_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :Mother_occupation %><br>
+    <%= f.text_field :Mother_occupation %>
+  </div>
+  <div class="field">
+    <%= f.label :Highest_degree_2 %><br>
+    <%= f.text_field :Highest_degree_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :Annual_income_2 %><br>
+    <%= f.number_field :Annual_income_2 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,38 @@
+<link href="css/jquery-ui.css" rel="stylesheet">
+<script type="text/javascript" src="/assets/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/jquery-1.7.2.min.js"></script>
+ <script type="text/javascript" src="/assets/funcoes.js"></script>
+
+    <button id="btnAdicionar">Novo</button>
+    <table id="tblCadastro" class="table">      
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Telefone</th>
+          <th>Email</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Joel</td>
+          <td>8888-8888</td>
+          <td>joel@email.com</td>
+          <td><img src="/assets/delete.png" class="btnExcluir"/><img src="/assets/pencil.png"/ class="btnEditar"></td>
+        </tr>
+      </tbody>
+    </table>
+    <script type="text/javascript">
+        $(function(){
+          $('#tabs').tabs();
+        });
+
+    </script>
+
+    <div id="tabs">
+       <ul>
+         <li> new </li>
+         <li> old </li>
+       </ul>
+    </div>  
+

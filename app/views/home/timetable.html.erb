@@ -1,0 +1,59 @@
+
+
+<%= form_tag("/home/timetable", method: "post") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= select_tag(:q, options_from_collection_for_select(Timetable.select(:class_num).distinct, "class_num","class_num")) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<% if @timetable %>
+<H1> Timetable for class <%= @class_name %> </H1>
+<table class="table">
+  
+  <thead>
+    <tr>
+      <th>Day ofweek</th>
+      <th>Subject 1</th>
+      <th>Subject 2</th>
+      <th>Subject 3</th>
+      <th>Subject 4</th>
+      <th>Subject 5</th>
+      <th>Subject 6</th>
+      <th>Subject 7</th>
+      <th>Subject 8</th>
+      <th>Subject 9</th>
+      <th>Subject 10</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @timetable.each do |timetable| %>
+      <tr>
+        
+        <td><%= timetable.day_ofweek %></td>
+        <td><%= timetable.subject_1 %></td>
+        <td><%= timetable.subject_2 %></td>
+        <td><%= timetable.subject_3 %></td>
+        <td><%= timetable.subject_4 %></td>
+        <td><%= timetable.subject_5 %></td>
+        <td><%= timetable.subject_6 %></td>
+        <td><%= timetable.subject_7 %></td>
+        <td><%= timetable.subject_8 %></td>
+        <td><%= timetable.subject_9 %></td>
+        <td><%= timetable.subject_10 %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%end%>
+<script type="text/javascript">
+  $(document).ready(function(){
+    
+    if ($("td").val().length > 0) {
+            $("td").hide();
+        };
+    
+
+    )};
+</script>

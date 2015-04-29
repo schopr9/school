@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
+  resources :students
+  resources :class_groups
+  resources :teachers
+  resources :timetables
+  resources :adminforms
   resources :notices
   resources :events
   get 'home/home'
   get 'home/transport'
   get 'home/admission'
+  get 'home/timetable' 
+  post 'home/timetable' => 'timetables#class_filter' , as: 'class_filter'
   root 'home#home'
-
+  get 'upload/index'
+  get 'upload/uploadFile' 
 
   devise_for :users 
   # The priority is based upon order of creation: first created -> highest priority.

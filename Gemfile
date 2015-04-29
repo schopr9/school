@@ -24,7 +24,13 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
+gem 'turbolinks'
 
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+
+gem 'carrierwave'
+gem 'rmagick'
+gem 'coffee-script-source', '1.8.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -41,6 +47,9 @@ group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 end
-
+group :production do
+	gem 'pg', 	'0.17.1'
+	gem 'rails_12factor', '0.0.2'
+end	
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

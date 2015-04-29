@@ -5,5 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
    GENDER_TYPES = [ ["Male","0"], [ "Female","1" ] ]
-   validates_inclusion_of :is_female, in: [true, false]      
+   validates_inclusion_of :is_female, in: [true, false]    
+     
 end
