@@ -1,1 +1,0 @@
-my_registrations_controller.rb
