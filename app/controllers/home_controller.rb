@@ -5,4 +5,8 @@ class HomeController < ApplicationController
     @class_name = Timetable.all
     
   end
+
+  def teacher
+  	@teachers =Teacher.all
+  end
 end

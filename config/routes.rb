@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'home/transport'
   get 'home/admission'
   get 'home/timetable' 
+  get 'home/teacher' 
   post 'home/timetable' => 'timetables#class_filter' , as: 'class_filter'
   root 'home#home'
   get 'upload/index'
