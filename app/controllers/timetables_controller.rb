@@ -1,5 +1,6 @@
 class TimetablesController < ApplicationController
   before_action :set_timetable, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user! , only: [:edit, :new, :destroy]
 
   # GET /timetables
   # GET /timetables.json

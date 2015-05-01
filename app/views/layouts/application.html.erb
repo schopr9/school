@@ -9,11 +9,12 @@
 
   <%= csrf_meta_tags %>
 </head>
-<body class = "container" offset = "col-sm-offset-4">
+<body class = "container" offset = "col-sm-offset-4" >
 
 <div class="row">
   <div  class="col-sm-8" align="bottom" >
     <h1 ><a href="/home/home">School Admin <small>Changing future</small></a></h1>
+
     </div>
   </div>
 
@@ -51,17 +52,27 @@
           </ul>
           <ul class="nav navbar-nav ">
             <li><a href="/home/transport">Transportation</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact us <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">About us</a></li>
-                <li><a href="#">careers</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul>
-            </li>
-          </ul>
+             <li><a href="#myModal"  data-toggle="modal" data-target="#myModal">Contact me</a>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Saurabh Chopra</h4>
+                      </div>
+                      <div class="modal-body">
+                        schopra86@live.com
+                        </br>
+                        or 
+                        </br>
+                        <a href="https://www.facebook.com/saurabh.chopra.790">you can coonect with me on facebook  </a>                    </div>
+                      <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+                </ul>
           <p class="navbar-text pull-right">
             <% if user_signed_in? %>
                 Logged in as <strong><%= current_user.name %></strong>.
@@ -79,12 +90,9 @@
         </nav>
   </div>
 
-
+  </p>
+</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://code.jquery.com/jquery.js"></script>
-<!-- Include all compiled plugins (below), or include individual files
-      as needed -->
-<script src="/vendor/bootstrap.min.js"></script>
 
   <%= yield %>
 <% if notice %>
@@ -97,13 +105,14 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $("img").addClass("img img-circle img-thumbnail");
+        
 });
-</script>
+  </script>
 
 </body>
-<footer class="footer">
-  <div  class="navbar-fixed-bottom" >
-    <p class="text-muted">@copyright School admin 2015</p>
-  </div>
+<footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>© 2015 School Works. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
 </footer>
 </html>
+  

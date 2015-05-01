@@ -27,7 +27,7 @@
 
 <p>
   <strong>Stud image:</strong>
-  <%= image_tag @student.stud_image_url(:thumb) %>
+  <%= image_tag (@student.stud_image.url(:thumb).to_s) %>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
