@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Datesheets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class name</th>
+      <th>Exam</th>
+      <th>Exam date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @datesheets.each do |datesheet| %>
+      <tr>
+        <td><%= datesheet.class_name %></td>
+        <td><%= datesheet.exam %></td>
+        <td><%= datesheet.exam_date %></td>
+        <td><%= link_to 'Show', datesheet %></td>
+        <td><%= link_to 'Edit', edit_datesheet_path(datesheet) %></td>
+        <td><%= link_to 'Destroy', datesheet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Datesheet', new_datesheet_path %>

@@ -1,0 +1,42 @@
+
+
+<%= form_tag("/home/datesheet", method: "post") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= select_tag(:q, options_from_collection_for_select(Datesheet.select(:class_name).distinct, "class_name","class_name")) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<% if @datesheet %>
+<H1> Datesheet for class <%= @class_name %>  </H1>
+<table class="table">
+  
+  <thead>
+    <tr>
+      <th>Day ofweek</th>
+      <th>Date</th>
+      <th>Exam</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @datesheet.each do |datesheet| %>
+      <tr>
+        
+        <td><%= datesheet.exam_date.today %></td>
+        <td><%= datesheet.exam_date %></td>
+        <td><%= datesheet.exam %></td>
+     </tr>
+    <% end %>
+  </tbody>
+</table>
+<%end%>
+<script type="text/javascript">
+  $(document).ready(function(){
+    
+    if ($("td").val().length > 0) {
+            $("td").hide();
+        };
+    
+
+    )};
+</script>

@@ -35,6 +35,15 @@
     <%= f.label :stud_image %><br>
     <%= f.file_field :stud_image %>
   </div>
+    <div class="field">
+    <%= label_tag :class_name %><br>
+    <%= text_field(:class_group,  :class_name) %>
+  </div>
+  <div class="field">
+    <%= label_tag :year %><br>
+    <%= number_field(:class_group,  :year) %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Class name:</strong>
+  <%= @datesheet.class_name %>
+</p>
+
+<p>
+  <strong>Exam:</strong>
+  <%= @datesheet.exam %>
+</p>
+
+<p>
+  <strong>Exam:</strong>
+  <%= @datesheet.exam_name %>
+</p>
+
+<p>
+  <strong>Exam date:</strong>
+  <%= @datesheet.exam_date %>
+</p>
+
+<%= link_to 'Edit', edit_datesheet_path(@datesheet) %> |
+<%= link_to 'Back', datesheets_path %>

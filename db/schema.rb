@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150427170544) do
+ActiveRecord::Schema.define(version: 20150506012636) do
 
   create_table "adminforms", force: :cascade do |t|
     t.string   "Name_of_student"
@@ -76,6 +76,15 @@ ActiveRecord::Schema.define(version: 20150427170544) do
   create_table "datafiles", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "datesheets", force: :cascade do |t|
+    t.string   "class_name"
+    t.string   "exam"
+    t.date     "exam_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "exam_name"
   end
 
   create_table "events", force: :cascade do |t|

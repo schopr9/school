@@ -11,7 +11,7 @@ class TimetablesController < ApplicationController
   # GET /timetables/class
     def class_filter
       @class_name = params[:q]
-      @timetable = Timetable.where(class_num: params[:q])
+      @datesheet = Timetable.where(class_num: params[:q])
       
       render class_filter_path
     end  

@@ -32,6 +32,7 @@ gem 'carrierwave_direct'
 gem 'rmagick'
 gem 'mini_magick', :git => 'git://github.com/minimagick/minimagick.git'
 gem 'coffee-script-source', '1.8.0'
+gem 'mail'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

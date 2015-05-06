@@ -1,0 +1,33 @@
+<%= form_for(@datesheet) do |f| %>
+  <% if @datesheet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@datesheet.errors.count, "error") %> prohibited this datesheet from being saved:</h2>
+
+      <ul>
+      <% @datesheet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :class_name %><br>
+    <%= f.text_field :class_name %>
+  </div>
+  <div class="field">
+    <%= f.label :exam %><br>
+    <%= f.text_field :exam %>
+  </div>
+  <div class="field">
+    <%= f.label :exam_name %><br>
+    <%= f.text_field :exam_name %>
+  </div>
+  <div class="field">
+    <%= f.label :exam_date %><br>
+    <%= f.date_select :exam_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

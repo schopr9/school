@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :datesheets
   resources :students
   resources :class_groups
   resources :teachers
@@ -10,8 +11,10 @@ Rails.application.routes.draw do
   get 'home/transport'
   get 'home/admission'
   get 'home/timetable' 
+  get 'home/datesheet' 
   get 'home/teacher' 
   post 'home/timetable' => 'timetables#class_filter' , as: 'class_filter'
+  post 'home/datesheet' => 'datesheets#datesheet_filter' , as: 'datesheet_filter'
   root 'home#home'
   get 'upload/index'
   get 'upload/uploadFile' 
