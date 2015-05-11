@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  resources :reports
   resources :datesheets
-  resources :students
+  resources :students do
+    resources :reports
+  end  
   resources :class_groups
   resources :teachers
   resources :timetables

@@ -1,0 +1,121 @@
+<%= form_for(@report) do |f| %>
+  <% if @report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+      <% @report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :student_id %><br>
+    <%= f.number_field :student_id %>
+  </div>
+  <div class="field">
+    <%= f.label :class_name %><br>
+    <%= f.text_field :class_name %>
+  </div>
+  <div class="field">
+    <%= f.label :class_year %><br>
+    <%= f.number_field :class_year %>
+  </div>
+  <div class="field">
+    <%= f.label :exam_name %><br>
+    <%= f.text_field :exam_name %>
+  </div>
+  <div class="field">
+    <%= f.label :subject_1 %><br>
+    <%= f.text_field :subject_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :marks_1 %><br>
+    <%= f.number_field :marks_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject_2 %><br>
+    <%= f.text_field :subject_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :marks_2 %><br>
+    <%= f.number_field :marks_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject_3 %><br>
+    <%= f.text_field :subject_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :marks_3 %><br>
+    <%= f.number_field :marks_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject_4 %><br>
+    <%= f.text_field :subject_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :marks_4 %><br>
+    <%= f.number_field :marks_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject_5 %><br>
+    <%= f.text_field :subject_5 %>
+  </div>
+  <div class="field">
+    <%= f.label :marks_5 %><br>
+    <%= f.number_field :marks_5 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject_6 %><br>
+    <%= f.text_field :subject_6 %>
+  </div>
+  <div class="field">
+    <%= f.label :marks_6 %><br>
+    <%= f.number_field :marks_6 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject_7 %><br>
+    <%= f.text_field :subject_7 %>
+  </div>
+  <div class="field">
+    <%= f.label :marks_7 %><br>
+    <%= f.number_field :marks_7 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject_8 %><br>
+    <%= f.text_field :subject_8 %>
+  </div>
+  <div class="field">
+    <%= f.label :marks_8 %><br>
+    <%= f.number_field :marks_8 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject_9 %><br>
+    <%= f.text_field :subject_9 %>
+  </div>
+  <div class="field">
+    <%= f.label :marks_9 %><br>
+    <%= f.number_field :marks_9 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject_10 %><br>
+    <%= f.text_field :subject_10 %>
+  </div>
+  <div class="field">
+    <%= f.label :marks_10 %><br>
+    <%= f.number_field :marks_10 %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br>
+    <%= f.text_field :comment %>
+  </div>
+  <div class="field">
+    <%= f.label :rank %><br>
+    <%= f.number_field :rank %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -30,5 +30,127 @@
   <%= image_tag (@student.stud_image.url(:thumb).to_s) %>
 </p>
 
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+<%= div_for(@student.reports.reverse) do |report| %>              
+    <p >
+      <strong>Posted <%= time_ago_in_words(report.created_at)%></strong><br/>
+    <a href="/students/<%= report.student_id%>/reports/<%= report.id%>"><%= h(report.exam_name)   %></a>
+
+   </p>
+<% end %>  
+
+
+             <a href="#myReport"  data-toggle="modal" data-target="#myReport"><button type="button" class="btn btn-primary btn-lg">Reports</button></a>
+                <div class="modal fade" id="myReport" tabindex="-1" role="dialog" aria-labelledby="myReportLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="myReportLabel">Report</h4>
+                      </div>
+                      <div class="modal-body">
+                        <%= form_for([@student, Report.new]) do |f| %>
+                          
+                          <div class="field">
+                            <%= f.label :student_id %><br>
+                            <%= f.number_field :student_id %>
+                          </div>
+                          <div class="field">
+                            <%= f.label :class_name %><br>
+                            <%= f.text_field :class_name %>
+                          </div>
+                          <div class="field">
+                            <%= f.label :class_year %><br>
+                            <%= f.number_field :class_year %>
+                          </div>
+                          <div class="field">
+                            <%= f.label :exam_name %><br>
+                            <%= f.text_field :exam_name %>
+                          </div>
+                          <div class="field" >
+                          <ul class="list-inline">
+                           <li> <%= f.label :subject %></li>
+                           
+                           <li> <%= f.label :marks %></li>
+                           </ul>
+
+                          </div>
+                          <div class="field">
+                          <%= f.text_field :subject_1 %>
+
+                            <%= f.number_field :marks_1 %>
+                            
+                          </div>
+                           <div class="field">
+                             <%= f.text_field :subject_2 %>
+
+                            <%= f.number_field :marks_2 %>
+                            
+                          </div>                          
+                           <div class="field">
+                             <%= f.text_field :subject_3 %>
+
+                            <%= f.number_field :marks_3 %>
+                            
+                          </div>                          
+                           <div class="field">
+                             <%= f.text_field :subject_4 %>
+
+                            <%= f.number_field :marks_4 %>
+                            
+                          </div>                          
+                           <div class="field">
+                             <%= f.text_field :subject_5 %>
+
+                            <%= f.number_field :marks_5 %>
+                            
+                          </div>                          
+                           <div class="field">
+                             <%= f.text_field :subject_6 %>
+
+                            <%= f.number_field :marks_6 %>
+                            
+                          </div>                          
+                           <div class="field">
+                             <%= f.text_field :subject_7 %>
+
+                            <%= f.number_field :marks_7 %>
+                            
+                          </div>                          
+                           <div class="field">
+                             <%= f.text_field :subject_8 %>
+
+                            <%= f.number_field :marks_8 %>
+                            
+                          </div>                          
+                           <div class="field">
+                             <%= f.text_field :subject_9 %>
+
+                            <%= f.number_field :marks_9 %>
+                            
+                          </div>                          
+                           <div class="field">
+                             <%= f.text_field :subject_10 %>
+
+                            <%= f.number_field :marks_10 %>
+                            
+                          </div>                          
+                          <div class="field">
+                            <%= f.label :comment %><br>
+                            <%= f.text_field :comment %>
+                          </div>
+                          <div class="field">
+                            <%= f.label :rank %><br>
+                            <%= f.number_field :rank %>
+                          </div>
+                          <div class="actions">
+                            <%= f.submit %>
+                          </div>
+                        <% end %>
+
+                    </div>
+                      <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+

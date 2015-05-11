@@ -1,0 +1,7 @@
+  <%= div_for report do %>
+      <p >
+        <strong>Posted <%= time_ago_in_words(report.created_at)%></strong><br/>
+        <%= h(report.exam_name) %>
+
+      </p>
+  <% end %>

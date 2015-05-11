@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Reports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Student</th>
+      <th>Class name</th>
+      <th>Class year</th>
+      <th>Exam name</th>
+      <th>Subject 1</th>
+      <th>Marks 1</th>
+      <th>Subject 2</th>
+      <th>Marks 2</th>
+      <th>Subject 3</th>
+      <th>Marks 3</th>
+      <th>Subject 4</th>
+      <th>Marks 4</th>
+      <th>Subject 5</th>
+      <th>Marks 5</th>
+      <th>Subject 6</th>
+      <th>Marks 6</th>
+      <th>Subject 7</th>
+      <th>Marks 7</th>
+      <th>Subject 8</th>
+      <th>Marks 8</th>
+      <th>Subject 9</th>
+      <th>Marks 9</th>
+      <th>Subject 10</th>
+      <th>Marks 10</th>
+      <th>Comment</th>
+      <th>Rank</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reports.each do |report| %>
+      <tr>
+        <td><%= report.student_id %></td>
+        <td><%= report.class_name %></td>
+        <td><%= report.class_year %></td>
+        <td><%= report.exam_name %></td>
+        <td><%= report.subject_1 %></td>
+        <td><%= report.marks_1 %></td>
+        <td><%= report.subject_2 %></td>
+        <td><%= report.marks_2 %></td>
+        <td><%= report.subject_3 %></td>
+        <td><%= report.marks_3 %></td>
+        <td><%= report.subject_4 %></td>
+        <td><%= report.marks_4 %></td>
+        <td><%= report.subject_5 %></td>
+        <td><%= report.marks_5 %></td>
+        <td><%= report.subject_6 %></td>
+        <td><%= report.marks_6 %></td>
+        <td><%= report.subject_7 %></td>
+        <td><%= report.marks_7 %></td>
+        <td><%= report.subject_8 %></td>
+        <td><%= report.marks_8 %></td>
+        <td><%= report.subject_9 %></td>
+        <td><%= report.marks_9 %></td>
+        <td><%= report.subject_10 %></td>
+        <td><%= report.marks_10 %></td>
+        <td><%= report.comment %></td>
+        <td><%= report.rank %></td>
+        <td><%= link_to 'Show', report %></td>
+        <td><%= link_to 'Edit', edit_report_path(report) %></td>
+        <td><%= link_to 'Destroy', report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Report', new_report_path %>
