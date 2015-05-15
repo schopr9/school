@@ -20,3 +20,8 @@ max-width:100% ;
     display:block;
 
 }
+
+.modal .modal-body {
+    max-height: 420px;
+    overflow-y: auto;
+}

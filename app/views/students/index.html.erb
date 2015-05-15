@@ -14,11 +14,16 @@
     <% @students.each do |student| %>
       <tr>
       <td > <%= image_tag student.stud_image_url(:thumb)%> </td>
-        <td><%= student.stud_name %></td>
-        <td><%= link_to 'Show', student %></td>
+      </br>
+      <div class="col-sm-offset-4">
+        <td class="col-sm-offset-4"><%= student.stud_name %></td>
+       </div> 
+      </tr>
+      <tr>
+      <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        </tr>
     <% end %>
   </tbody>
 </table>

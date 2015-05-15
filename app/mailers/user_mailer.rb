@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  default from: 'saurabh.mainframe86@gmail.com'
+  default from: 'cbzextreme@gmail.com'
   require 'mail' 
   
   def welcome_email(user)
@@ -8,10 +8,12 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Welcome to My Awesome Site')
   end
 
-  def new_email
+
+  def new_email(user)
+    @user = user
   	mail = Mail.new do
-          from     'saurabh.mainframe86@gmail.com'
-          to       'schopra86@live.com'
+          from     'cbzextreme@gmail.com'
+          to       @user.email
           subject  'Here is the image you wanted'
           body     ('body my body')
           

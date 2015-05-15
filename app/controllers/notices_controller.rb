@@ -29,7 +29,8 @@ class NoticesController < ApplicationController
 
     respond_to do |format|
       if @notice.save
-        
+          @user = current_user
+          UserMailer.new_email(@user)
         format.html { redirect_to @notice, notice: 'Notice was successfully created.' }
         format.json { render :show, status: :created, location: @notice }
       else

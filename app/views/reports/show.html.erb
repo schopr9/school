@@ -1,124 +1,76 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Student:</strong>
-  <%= @report.student_id %>
-</p>
+    <p >
+      <strong>Student:</strong>
+      <%= @report.student_id %>
+    </p>
 
-<p>
-  <strong>Class name:</strong>
-  <%= @report.class_name %>
-</p>
+    <p >
+      <strong>Class name:</strong>
+      <%= @report.class_name %>
+    </p>
 
-<p>
-  <strong>Class year:</strong>
-  <%= @report.class_year %>
-</p>
+    <p >
+      <strong>Class year:</strong>
+      <%= @report.class_year %>
+    </p>
 
-<p>
-  <strong>Exam name:</strong>
-  <%= @report.exam_name %>
-</p>
-
-<p>
-  <strong>Subject 1:</strong>
-  <%= @report.subject_1 %>
-</p>
-
-<p>
-  <strong>Marks 1:</strong>
-  <%= @report.marks_1 %>
-</p>
-
-<p>
-  <strong>Subject 2:</strong>
-  <%= @report.subject_2 %>
-</p>
-
-<p>
-  <strong>Marks 2:</strong>
-  <%= @report.marks_2 %>
-</p>
-
-<p>
-  <strong>Subject 3:</strong>
-  <%= @report.subject_3 %>
-</p>
-
-<p>
-  <strong>Marks 3:</strong>
-  <%= @report.marks_3 %>
-</p>
-
-<p>
-  <strong>Subject 4:</strong>
-  <%= @report.subject_4 %>
-</p>
-
-<p>
-  <strong>Marks 4:</strong>
-  <%= @report.marks_4 %>
-</p>
-
-<p>
-  <strong>Subject 5:</strong>
-  <%= @report.subject_5 %>
-</p>
-
-<p>
-  <strong>Marks 5:</strong>
-  <%= @report.marks_5 %>
-</p>
-
-<p>
-  <strong>Subject 6:</strong>
-  <%= @report.subject_6 %>
-</p>
-
-<p>
-  <strong>Marks 6:</strong>
-  <%= @report.marks_6 %>
-</p>
-
-<p>
-  <strong>Subject 7:</strong>
-  <%= @report.subject_7 %>
-</p>
-
-<p>
-  <strong>Marks 7:</strong>
-  <%= @report.marks_7 %>
-</p>
-
-<p>
-  <strong>Subject 8:</strong>
-  <%= @report.subject_8 %>
-</p>
-
-<p>
-  <strong>Marks 8:</strong>
-  <%= @report.marks_8 %>
-</p>
-
-<p>
-  <strong>Subject 9:</strong>
-  <%= @report.subject_9 %>
-</p>
-
-<p>
-  <strong>Marks 9:</strong>
-  <%= @report.marks_9 %>
-</p>
-
-<p>
-  <strong>Subject 10:</strong>
-  <%= @report.subject_10 %>
-</p>
-
-<p>
-  <strong>Marks 10:</strong>
-  <%= @report.marks_10 %>
-</p>
+    <p >
+      <strong>Exam name:</strong>
+      <%= @report.exam_name %>
+    </p>
+<div align="center">
+<table class="table">
+<thead>
+<tr>
+<th> Subject </th>
+<th> Marks </th>
+</tr></thead>
+<tbody>
+<tr>
+ <td> <%= @report.subject_1 %> </td>
+ <td> <%= @report.marks_1 %>  </td>
+</tr> 
+<tr>
+ <td> <%= @report.subject_1 %> </td>
+ <td> <%= @report.marks_1 %>  </td>
+</tr> 
+<tr>
+ <td> <%= @report.subject_2 %> </td>
+ <td> <%= @report.marks_2%>  </td>
+</tr> 
+<tr>
+ <td> <%= @report.subject_3 %> </td>
+ <td> <%= @report.marks_3 %>  </td>
+</tr> 
+<tr>
+ <td> <%= @report.subject_4 %> </td>
+ <td> <%= @report.marks_4 %>  </td>
+</tr> 
+<tr>
+ <td> <%= @report.subject_5 %> </td>
+ <td> <%= @report.marks_5 %>  </td>
+</tr> 
+<tr>
+ <td> <%= @report.subject_6 %> </td>
+ <td> <%= @report.marks_6 %>  </td>
+</tr> 
+<tr>
+ <td> <%= @report.subject_7 %> </td>
+ <td> <%= @report.marks_7 %>  </td>
+</tr> 
+<tr>
+ <td> <%= @report.subject_8 %> </td>
+ <td> <%= @report.marks_8 %>  </td>
+</tr> 
+<tr>
+ <td> <%= @report.subject_9 %> </td>
+ <td> <%= @report.marks_9 %>  </td>
+</tr> 
+<tr>
+ <td> <%= @report.subject_10 %> </td>
+ <td> <%= @report.marks_10 %>  </td>
+</tr> 
 
 <p>
   <strong>Comment:</strong>
@@ -129,6 +81,8 @@
   <strong>Rank:</strong>
   <%= @report.rank %>
 </p>
-
+</tbody>
+</table>
+</div>
 <%= link_to 'Edit', edit_report_path(@report) %> |
 <%= link_to 'Back', reports_path %>

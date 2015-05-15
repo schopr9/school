@@ -3,6 +3,7 @@
 <%= form_tag("/home/datesheet", method: "post") do %>
   <%= label_tag(:q, "Search for:") %>
   <%= select_tag(:q, options_from_collection_for_select(Datesheet.select(:class_name).distinct, "class_name","class_name")) %>
+  <%= select_tag(:y, options_from_collection_for_select(Datesheet.select(:exam_name).distinct, "exam_name","exam_name")) %>
   <%= submit_tag("Search") %>
 <% end %>
 

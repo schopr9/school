@@ -1,45 +1,53 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+ <div class="col-sm-2">
+      <p>
+        <strong>Stud image:</strong>
+        <%= image_tag (@student.stud_image.url(:thumb).to_s) %>
+      </p>
 
-<p>
-  <strong>Stud name:</strong>
-  <%= @student.stud_name %>
-</p>
+  </div>
+ <div class="col-sm-offset-2" >
+    <p>
+      <strong>Stud name:</strong>
+      <%= @student.stud_name %>
+    </p>
 
-<p>
-  <strong>Stud dob:</strong>
-  <%= @student.stud_dob %>
-</p>
+    <p>
+      <strong>Stud dob:</strong>
+      <%= @student.stud_dob %>
+    </p>
 
-<p>
-  <strong>Gender:</strong>
-  <%= @student.gender %>
-</p>
+    <p>
+      <strong>Gender:</strong>
+      <% if @student.gender == false %>
+          Male
+       <% else %>
+          Female
+      <% end %>    
+    </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @student.address %>
-</p>
+    <p>
+      <strong>Address:</strong>
+      <%= @student.address %>
+    </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @student.email %>
-</p>
-
-<p>
-  <strong>Stud image:</strong>
-  <%= image_tag (@student.stud_image.url(:thumb).to_s) %>
-</p>
-
+    <p>
+      <strong>Email:</strong>
+      <%= @student.email %>
+    </p>
+ </div>
+</div>  
 <%= div_for(@student.reports.reverse) do |report| %>              
     <p >
-      <strong>Posted <%= time_ago_in_words(report.created_at)%></strong><br/>
-    <a href="/students/<%= report.student_id%>/reports/<%= report.id%>"><%= h(report.exam_name)   %></a>
+      <strong>Report card Posted <%= time_ago_in_words(report.created_at)%> </strong><br/>
+    <a href="/students/<%= report.student_id%>/reports/<%= report.id%>"><%= report.class_name   %>    <%= report.exam_name%></a>
 
    </p>
 <% end %>  
 
 
-             <a href="#myReport"  data-toggle="modal" data-target="#myReport"><button type="button" class="btn btn-primary btn-lg">Reports</button></a>
+             <a href="#myReport"  data-toggle="modal" data-target="#myReport"><button type="button" class="btn btn-primary btn-lg">Create Report Card</button></a>
                 <div class="modal fade" id="myReport" tabindex="-1" role="dialog" aria-labelledby="myReportLabel" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
@@ -49,10 +57,6 @@
                       <div class="modal-body">
                         <%= form_for([@student, Report.new]) do |f| %>
                           
-                          <div class="field">
-                            <%= f.label :student_id %><br>
-                            <%= f.number_field :student_id %>
-                          </div>
                           <div class="field">
                             <%= f.label :class_name %><br>
                             <%= f.text_field :class_name %>

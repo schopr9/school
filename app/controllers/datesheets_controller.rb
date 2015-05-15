@@ -14,7 +14,7 @@ class DatesheetsController < ApplicationController
 
   def datesheet_filter
     @class_name = params[:q]
-    @datesheet = Datesheet.where(class_name: params[:q])
+    @datesheet = Datesheet.where(class_name: params[:q], exam_name: params[:y])
       
     render datesheet_filter_path
   end  
